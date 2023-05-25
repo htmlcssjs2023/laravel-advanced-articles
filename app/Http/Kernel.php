@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http;
-
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,5 +62,9 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+         'first' => \App\Http\Middleware\first::class,
+         'second' => \App\Http\Middleware\second::class,
+         'checkAge' => \App\Http\Middleware\CheckAgeMiddleware::class,
+         'admin' => \App\Http\Middleware\AdminMiddleware::class,
     ];
 }
